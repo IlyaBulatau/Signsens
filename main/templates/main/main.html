@@ -8,13 +8,20 @@
 
 </div>
 <div class="text-container">
- <p style="color: #2BA318;">
+ <p style="color: #2BA318; font-family: 'Roboto';
+ font-style: normal;
+ font-weight: 800;
+ font-size: 50px;
+ line-height: 130%;
+ /* identical to box height, or 65px */
+ 
+ text-align: center; " >
     Wybierz słowo
      </p>
 </div>
 <div style="display: flex; align-items: center; justify-content: center; height: 100vh;">
     <ul class="container">
-         <a href=""><li>01 Cześć</li></a>
+         <a href="{% url 'word' %}"><li>01 Cześć</li></a>
          <a href=""><li>02 Dziękuję</li></a>
         <a href=""> <li>03 Depresja</li></a>
          <a href=""><li>04 Ból</li></a>

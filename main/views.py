@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.views.generic import ListView
 
 
 def start_page(request):
@@ -10,3 +10,7 @@ def welcom(request):
 
 def main(requset):
     return render(requset, 'main/main.html')
+
+def words(request):
+    return render(request, 'main/word.html')
+
