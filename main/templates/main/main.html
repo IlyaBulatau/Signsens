@@ -21,10 +21,11 @@
 </div>
 <div style="display: flex; align-items: center; justify-content: center; height: 100vh;">
     <ul class="container">
-         <a href="{% url 'word' %}"><li>01 Cześć</li></a>
-         <a href=""><li>02 Dziękuję</li></a>
-        <a href=""> <li>03 Depresja</li></a>
-         <a href=""><li>04 Ból</li></a>
-         <a href=""><li>05 Zdrowie</li></a>
+        {% for letter in word %}
+         <a href="{{ letter.get_absolute_url }}"><li>0{{ letter.id }} {{ letter }}</li></a>
+         {% endfor %}
     </ul>
        </div>
+
+
+

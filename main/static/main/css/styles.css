@@ -145,6 +145,27 @@ width: 436.65px;
 height: 179px;
 left: 150px;
 top: 0px;
+}
+
+.word {
+
+width: 412px;
+height: 176px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 900;
+font-size: 150px;
+line-height: 176px;
+/* identical to box height */
 
 
+color: #4d3535;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
 }
