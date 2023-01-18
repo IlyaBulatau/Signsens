@@ -7,6 +7,9 @@ class Word(models.Model):
     create_time = models.DateTimeField(auto_now_add=True)
     active = models.BooleanField(default=True)
 
+    class Meta:
+        ordering = ('create_time',)
+
     def __str__(self) -> str:
         return self.title
 
