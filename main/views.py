@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic import ListView, DetailView
 
 from main.models import Word
@@ -19,6 +19,14 @@ class WordDetailView(DetailView):
     template_name = 'main/word.html'
     context_object_name = 'detail_word'
     slug_url_kwarg = 'word_slug'
+
+    # def get(self, request, *args, **kwargs):
+    #     last_word = request.session.get('last_word')
+    #     current_word = self.kwargs.get(self.slug_url_kwarg)
+    #     if last_word != current_word:
+    #         request.session['last_word'] = current_word
+    #         return redirect('word')
+    #     return super().get(request, *args, **kwargs)
 
 def start_page(request):
     return render(request, 'main/start_page.html')
