@@ -4,8 +4,34 @@
 
 
 <img class="photo" src="{% static 'main/image/fon.jpg' %}" alt="">
-<img class="slice" src="{% static 'main/image/slice.png' %}" alt="">
 <div ><h1 class="word" style="text-align: center; margin: 0 auto; position: absolute;
     top: 65%;
     left: 50%;
     transform: translate(-50%, -50%); color:white">{{ detail_word.title }}</h1></div>
+
+    <div class="word-detail-container">
+      <h1>{{ detail_word.name }}</h1>
+      <p>{{ detail_word.definition }}</p>
+  
+  
+      <div id="camera-stream" style="display: none;"></div>
+    </div>
+
+    <video id="camera-stream-video" autoplay playsinline allow="camera"></video>
+
+
+    <script>
+      const video = document.getElementById('camera-stream-video');
+    
+      navigator.mediaDevices.getUserMedia({ video: true })
+        .then(stream => {
+          video.srcObject = stream;
+          video.play();
+        })
+        .catch(error => {
+          console.error(error);
+        });
+    </script><
+   
+
+     
