@@ -1,0 +1,29 @@
+{% load static %}
+
+<div style="position: absolute;
+width: 1920px;
+height: 60px;
+left: 0px;
+top: 0px;
+
+background: #FFFFFF;
+/* Cart shadow */
+
+box-shadow: 3px 5px 20px rgba(172, 177, 192, 0.25);">
+<a href="{% url 'start_page' %}"><img src="{% static 'main/image/full-logo-green1.jpg' %}" style="position: absolute;
+    width: 180px;
+    height: 60px;
+    left: 150px;
+    top: 0px;
+    " alt="image"></a>
+    <a href=""><img src="{% static 'main/image/avatar.png' %}" alt="image1" style="position: absolute;
+        left: 0%;
+        right: 0%;
+        top: 0%;
+        bottom: 0%;"></a>
+    
+</div>
+
+
+{% block content %}
+{% endblock %}
