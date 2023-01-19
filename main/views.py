@@ -31,6 +31,9 @@ class WordDetailView(View):
         return self.get(request, *args, **kwargs)
 
 def enable_camera():
+    '''
+    a function that uses the OpenCV library to open a connection to the computer's camera and display the camera's feed in a window    
+    '''
     cap = cv2.VideoCapture(0)
     if not cap.isOpened():
         print("Error opening camera")
